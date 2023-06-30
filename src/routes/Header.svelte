@@ -1,5 +1,9 @@
-<header>
-    <nav id="navigation" class="flex justify-between items-center">
+<script>
+    import { headerTipFade, headerTip as tip } from './stores';
+</script>
+
+<header class="fixed inset-x-0 top-0">
+    <nav id="navigation" class="flex justify-between items-center max-w-screen-xl mx-auto">
         <div id="navigation-title">
             <a href="/">
                 <h1>Isla</h1>
@@ -7,7 +11,8 @@
                 <p>岛</p>
             </a>
         </div>
-        <div id="extra-info"></div>
+        <div id="extra-info" class="transition-all duration-300"
+        class:faded={$headerTipFade}>{$tip}</div>
         <div id="navigation-action">
             <ul class="flex gap-4">
                 <li>test1</li>
@@ -25,8 +30,12 @@
     $subtext-color: #888;
     $decoration-color: #aaa;
 
+    header {
+        background-image: linear-gradient(to bottom, #f7f7f7, transparent);
+    }
+
     #navigation {
-        padding: 1.75em 1em;
+        padding: 1.75em 0;
         color: $text-color;
 
         #navigation-title {

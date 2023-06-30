@@ -1,5 +1,18 @@
 <script>
     import logo from '$lib/images/logo.png'
+
+    /* Handle Header Tip*/
+    import { headerTipFade, headerTip as tip } from './stores';
+    function tipPop(content='') { headerTipFade.set(false); tip.set(content) } 
+    function tipFade() { headerTipFade.set(true) }
+
+    /* Intro Data */
+    let intros = [
+        ['INFP 和双子座','以没用的事情为乐','上升星座是处女'],
+        ['前端攻城狮','对，不是工程师','仅仅是自娱自乐'],
+        ['讲故事的人','喜欢写写小说','喜欢创造一个世界的感觉'],
+        ['离经叛道的文字','是个独立博客博主','但更新总是断断续续']
+    ]
 </script>
 
 <!-- Banner -->
@@ -13,11 +26,20 @@
 </section>
 
 <!-- Intro -->
-<section id="intro" class="grid grid-cols-5 p-3">
-    <div class="intro-item">
-        <h3>INFP 和双子座</h3>
-        <p>只是随便写写</p>
+<section id="intro" class="grid grid-cols-5 p-3 gap-5">
+    {#each intros as item}
+    <div class="intro-item" role="tooltip"
+    on:mouseleave={tipFade}
+    on:mousemove={() => tipPop(item[2])}>
+        <h3>{item[0]}</h3>
+        <p>{item[1]}</p>
     </div>
+    {/each}
+</section>
+
+<!-- Biography -->
+<section id="bio">
+    
 </section>
 
 <style lang="scss">
@@ -48,7 +70,6 @@
             border: 0.215rem solid #333;
             transition-property: box-shadow, transform;
             transition-duration: 0.3s;
-            cursor: pointer;
 
             h3 {
                 font-size: 160%;
