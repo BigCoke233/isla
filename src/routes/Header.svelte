@@ -15,7 +15,7 @@
         class:faded={$headerTipFade}>{$tip}</div>
         <div id="navigation-action">
             <ul class="flex gap-4">
-                <li>test1</li>
+                <li><a href="/blog">博客</a></li>
                 <li>test2</li>
                 <li>test3</li>
             </ul>

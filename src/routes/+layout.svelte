@@ -4,6 +4,9 @@
 
     import svelteLogo from '$lib/images/svelte-logo.svg'
     import tailwindLogo from '$lib/images/tailwindcss-logo.svg'
+
+    import { fade } from 'svelte/transition'
+    export let data
 </script>
 
 <!-- meta and basics -->
@@ -17,9 +20,11 @@
 
 <Header />
 
-<main class="mt-16">
+{#key data.currentRoute}
+  <main class="mt-20" in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
     <slot />
-</main>
+  </main>
+{/key}
 
 <footer class="flex justify-between items-center py-8">
     <div>&copy; 2023 Eltrac</div>

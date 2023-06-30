@@ -19,7 +19,7 @@
 <section id="banner" class="flex items-center">
     <img id="banner-img" src={logo} alt="a cabin on a small island" class="select-none" />
     <div id="banner-text">
-        <h2>每个人都是一座孤岛。</h2>
+        <h2 class="page-title">每个人都是一座孤岛。</h2>
         <p>而就在刚才，你，我尚不知晓姓名的朋友，误入了我的领海。</p>
         <p>欢迎来到 Isla，这是 Eltrac 在互联网上的家。</p>
     </div>
@@ -39,7 +39,7 @@
 
 <!-- Biography -->
 <section id="bio">
-    
+
 </section>
 
 <style lang="scss">
@@ -51,10 +51,6 @@
             h2 {
                 font-size: 400%;
                 font-weight: 800;
-                background-image: linear-gradient(to right, #333, #666);
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                -webkit-background-clip: text;
                 margin-bottom: 1rem
             }
             p {
