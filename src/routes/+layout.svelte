@@ -20,7 +20,7 @@
 <svelte:head>
     <title>Isla</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href={logo} />
+    <link rel="icon" type="image/svg" href={logo} />
 </svelte:head>
 
 <!-- page structure -->
