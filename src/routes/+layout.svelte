@@ -4,6 +4,7 @@
 
     import svelteLogo from '$lib/images/svelte-logo.svg'
     import tailwindLogo from '$lib/images/tailwindcss-logo.svg'
+    import logo from '$lib/images/logo.png'
 
     /* Handle Header Tip*/
     import { headerTipFade, headerTip as tip } from './stores';
@@ -19,6 +20,7 @@
 <svelte:head>
     <title>Isla</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href={logo} />
 </svelte:head>
 
 <!-- page structure -->

@@ -4,6 +4,10 @@
     import Title from '../Title.svelte'
 </script>
 
+<svelte:head>
+  <title>友人 - Isla</title>
+</svelte:head>
+
 <div class="p-3 my-20" id="links">
     <Title des="这里的船可以去到 Eltrac 朋友的岛">码头</Title>
     <article class="max-w-screen-md mx-auto">

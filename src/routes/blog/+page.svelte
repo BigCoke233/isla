@@ -3,6 +3,10 @@
     import Title from '../Title.svelte'
 </script>
 
+<svelte:head>
+  <title>博客 - Isla</title>
+</svelte:head>
+
 <div class="p-3 my-20" id="blog">
     <Title des="Isla 上唯一的资料库">树洞图书馆</Title>
 
