@@ -5,6 +5,11 @@
     import svelteLogo from '$lib/images/svelte-logo.svg'
     import tailwindLogo from '$lib/images/tailwindcss-logo.svg'
 
+    /* Handle Header Tip*/
+    import { headerTipFade, headerTip as tip } from './stores';
+    function tipPop(content='') { headerTipFade.set(false); tip.set(content) } 
+    function tipFade() { headerTipFade.set(true) }
+
     import { fade } from 'svelte/transition'
     export let data
 </script>
@@ -28,7 +33,8 @@
 
 <footer class="flex justify-between items-center py-8">
     <div>&copy; 2023 Eltrac</div>
-    <div>Built with <img src={svelteLogo} alt="svelte" /> + <img src={tailwindLogo} alt="Tailwind" /></div>
+    <div>Built with <img src={svelteLogo} alt="svelte" on:mouseleave={tipFade} on:mousemove={() => tipPop('Svelte，难用死了')} /> + 
+    <img src={tailwindLogo} alt="Tailwind" on:mouseleave={tipFade} on:mousemove={() => tipPop('其实是 Tailwind 和 SCSS 混用')} /></div>
 </footer>
 
 <style lang="scss">

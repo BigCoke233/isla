@@ -2,7 +2,7 @@
     import { headerTipFade, headerTip as tip } from './stores';
 </script>
 
-<header class="fixed inset-x-0 top-0">
+<header class="fixed inset-x-0 top-0 px-6 md:px-0">
     <nav id="navigation" class="flex justify-between items-center max-w-screen-xl mx-auto">
         <div id="navigation-title">
             <a href="/">
@@ -11,7 +11,7 @@
                 <p>岛</p>
             </a>
         </div>
-        <div id="extra-info" class="transition-all duration-300"
+        <div id="extra-info" class="transition-all duration-300 hidden md:block"
         class:faded={$headerTipFade}>{$tip}</div>
         <div id="navigation-action">
             <ul class="flex gap-4">

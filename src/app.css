@@ -33,3 +33,14 @@
     overflow: hidden;
     margin-right: 0.5rem
 }
+
+@keyframes popup {
+    from {
+        transform: translateY(3rem);
+        opacity: 0
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
