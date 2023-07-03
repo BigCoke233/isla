@@ -3,6 +3,7 @@
     import twitter from '$lib/images/twitter.svg'
     import bilibili from '$lib/images/bilibili.svg'
     import discord from '$lib/images/discord.svg'
+    import github from '$lib/images/github.svg'
     import avatar from '$lib/images/avatar.png'
 
     /* Handle Header Tip*/
@@ -65,18 +66,18 @@
 </section>
 
 <!-- Work Display -->
-<section id="works" class="md:grid md:grid-cols-3 my-20">
-    <div class="work">
+<section id="works" class="md:grid md:grid-cols-3 my-10 md:my-24">
+    <div class="work md:border-r" on:mouseleave={tipFade} on:mousemove={() => tipPop('停更了，因为屎山堆太高')} role="banner">
         <h3>Miracles</h3>
         <p>简洁但不简单的 Typecho 主题</p>
         <p><a href="https://github.com/BigCoke233/miracles" target="_blank">访问 GitHub 仓库</a></p>
     </div>
-    <div class="work">
+    <div class="work md:border-r" on:mouseleave={tipFade} on:mousemove={() => tipPop('无色的绿色...... 我是不是说过这句话？')} role="banner">
         <h3>怪奇灵感生成器</h3>
         <p>猴子打字机式的创作</p>
         <p><a href="https://bi.guhub.cn/" target="_blank">访问网站</a></p>
     </div>
-    <div class="work">
+    <div class="work" on:mouseleave={tipFade} on:mousemove={() => tipPop('然而作者自己都不用')} role="banner">
         <h3>Textretty</h3>
         <p>一个简单的文字排版 CSS</p>
         <p><a href="https://github.com/BigCoke233/textretty.css">访问 GitHub 仓库</a></p>
@@ -86,7 +87,11 @@
 <!-- Social Media -->
 <section id="media" class="p-3 my-8">
     <h3 class="text-center text-gray-500 text-2xl">Find me at</h3>
-    <div id="media-links" class="flex justify-center gap-5 my-5">
+    <div id="media-links" class="grid grid-cols-2 md:flex justify-center gap-5 my-5">
+        <!-- GitHub -->
+        <a href="https://github.com/BigCoke233" target="_blank"
+        on:mouseleave={tipFade}
+        on:mousemove={() => tipPop('最近 Contribution 越来越白了')}><img src={github} /></a>
         <!-- Discord -->
         <button on:click={() => { discord_dialog=true }}
         on:mouseleave={tipFade}
@@ -231,7 +236,9 @@
                 }
                 img {
                     width: 5em;
-                    height: 5em
+                    height: 5em;
+                    display: block;
+                    margin: 0 auto
                 }
             }
         }
@@ -308,17 +315,21 @@
                     text-decoration-color: #333;
                 }
             }
+            @media screen and (max-width: 767px) {
+                margin: 3em 0
+            }
         }
-
-        &:before {
-            content: '';
-            position: absolute;
-            background-color: #fafafa;
-            z-index: -1;
-            left: 0;
-            right: 0;
-            height: 12rem;
-            transform: translateY(-2rem)
+        @media screen and (min-width: 768px) {
+            &:before {
+                content: '';
+                position: absolute;
+                background-color: #fafafa;
+                z-index: -1;
+                left: 0;
+                right: 0;
+                height: 16rem;
+                transform: translateY(-4rem)
+            }
         }
     }
 </style>

@@ -66,7 +66,8 @@
         #extra-info {
             color: $decoration-color;
             font-size: 0.9em;
-            font-style: italic
+            font-style: italic;
+            background-color: #fafafa
         }
     }
 </style>
