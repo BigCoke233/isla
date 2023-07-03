@@ -23,7 +23,7 @@
         data-input-position="top"
         data-theme="noborder_light"
         data-lang="zh-CN"
-        data-loading="anonymous"
+        data-loading="lazy"
         crossorigin="anonymous"
         async>
     </script>
