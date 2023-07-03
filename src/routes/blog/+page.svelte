@@ -1,13 +1,10 @@
 <script>
-    export let data
-    console.log(data.posts)
+    export let data;
+    import Title from '../Title.svelte'
 </script>
 
 <div class="p-3 my-20" id="blog">
-    <header class="page-title">
-        <h2>树洞图书馆</h2>
-        <p>Isla 上唯一的资料库，目前还没有多少内容</p>
-    </header>
+    <Title des="Isla 上唯一的资料库">树洞图书馆</Title>
 
     <ol class="my-10 grid grid-cols-3 gap-5">
         {#each data.posts as post}
@@ -22,14 +19,6 @@
 
 <style lang="scss">
     #blog {
-        .page-title {
-            text-align: center;
-
-            h2 {
-                font-weight: 800;
-                font-size: 300%;
-            }
-        }
         ol li {
             border-bottom: 1px dashed #ccc;
             &:hover {
