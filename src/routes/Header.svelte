@@ -31,7 +31,7 @@
     $decoration-color: #aaa;
 
     header {
-        background-image: linear-gradient(to bottom, #f7f7f7, transparent);
+        background-image: linear-gradient(to bottom, #f7f7f7 30%, transparent);
     }
 
     #navigation {
