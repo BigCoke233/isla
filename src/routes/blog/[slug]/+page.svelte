@@ -11,6 +11,7 @@
     <svelte:component this={data.content} />
   </article>
   <section id="comment" class="max-w-screen-md mb-10 mx-auto">
+    <div class="giscus" />
     <script src="https://giscus.app/client.js"
         data-repo="BigCoke233/isla-giscus"
         data-repo-id="R_kgDOJ3CBvg"
