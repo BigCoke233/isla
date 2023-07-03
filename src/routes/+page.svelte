@@ -63,12 +63,13 @@
     #intro {
         .intro-item {
             padding: 1.5em;
-            border: 0.215rem solid #333;
+            background-color: #f7f7f7;
+            border-radius: 0.25rem;
             transition-property: box-shadow, transform;
             transition-duration: 0.3s;
 
             h3 {
-                font-size: 160%;
+                font-size: 140%;
                 font-weight: 600
             }
             p {
@@ -77,7 +78,7 @@
 
             &:hover {
                 transform: translateY(-1em);
-                box-shadow: 0 0.3em 2em rgba(0,0,0,0.15)
+                box-shadow: 0 0.3em 1em rgba(0,0,0,0.175)
             }
         }
     }
