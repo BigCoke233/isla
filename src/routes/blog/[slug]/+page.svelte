@@ -7,7 +7,7 @@
     <h1 class="font-bold text-5xl">{ data.title }</h1>
     <p class="my-2 text-gray-600">{data.date} · {data.tags}</p>
   </header>
-  <article class="max-w-screen-md mb-10 mx-auto">
+  <article class="yue max-w-screen-md mb-10 mx-auto">
     <svelte:component this={data.content} />
   </article>
   <section id="comment" class="max-w-screen-md mb-10 mx-auto">
