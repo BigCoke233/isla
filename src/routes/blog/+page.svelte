@@ -10,7 +10,7 @@
 <div class="p-3 my-20" id="blog">
     <Title des="Isla 上唯一的资料库">树洞图书馆</Title>
 
-    <ol class="my-10 grid grid-cols-3 gap-5">
+    <ol class="my-10 md:grid md:grid-cols-3 md:gap-5">
         {#each data.posts as post}
             <li class="list-none py-4 transition text-lg">
                 <span> {post.meta.date}</span>
