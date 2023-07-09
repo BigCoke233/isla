@@ -40,6 +40,7 @@
 </footer>
 
 <style lang="scss">
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
     footer {
         color: #777;
         font-size: 110%;

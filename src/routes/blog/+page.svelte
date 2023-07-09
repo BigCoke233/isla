@@ -39,7 +39,7 @@
             }
             a.post-link {
                 flex-grow: 1;
-                font-weight: 600
+                font-weight: 500
             }
             em.post-tags {
                 color: #999;
