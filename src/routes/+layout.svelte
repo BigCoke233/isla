@@ -34,7 +34,7 @@
 {/key}
 
 <footer class="flex justify-between items-center py-8">
-    <div>&copy; 2023 Eltrac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></div>
+    <div>&copy; 2023 Eltrac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a></div>
     <div>Built with <img src={svelteLogo} alt="svelte" on:mouseleave={tipFade} on:mousemove={() => tipPop('Svelte，难用死了')} /> + 
     <img src={tailwindLogo} alt="Tailwind" on:mouseleave={tipFade} on:mousemove={() => tipPop('其实是 Tailwind 和 SCSS 混用')} /></div>
 </footer>
