@@ -20,6 +20,8 @@
     ]
 
     let discord_dialog = false;
+
+    export let data;
 </script>
 
 <!-- Banner -->
@@ -45,7 +47,7 @@
 </section>
 
 <!-- Biography -->
-<section id="bio" class="p-3 my-8 leading-normal md:grid">
+<section id="bio" class="p-3 mt-8 leading-normal md:grid">
     <div id="bio-left">
         <h3 on:mouseleave={tipFade} on:mousemove={() => tipPop('一个笨蛋')}>Eltrac</h3>
         <small>Elegant Track / L Track</small>
@@ -63,6 +65,12 @@
         不怎么看电影因为不习惯干坐着一动不动<span on:mouseleave={tipFade} on:mousemove={() => tipPop('呵，INFP。')}>但喜欢在没有灯的房间里有人陪的感觉。</span></p>
         <p>化身是一只考拉，因为考拉不是在睡觉，就是在吃饭<del>和做爱</del>做的事。</p>
     </div>
+</section>
+
+<!-- Latest Post -->
+<section id="latest" class="px-3 py-6 m-3 mt-0 border-y text-lg text-center">
+    <p><strong>Eltrac</strong> 在 {data.posts[0].meta.date} 发布了新文章
+    <a href={data.posts[0].path} class="underline underline-offset-8 decoration-gray-300">「{data.posts[0].meta.title}」</a>，快来看看吧！</p>
 </section>
 
 <!-- Work Display -->
@@ -105,6 +113,9 @@
         on:mouseleave={tipFade}
         on:mousemove={() => tipPop('做过听译，之后可能会更新原创内容？')}><img src={bilibili} /></a>
     </div>
+    <p class="text-center text-gray-500">
+        或者通过 <a href="mailto:hi@guhub.cn" target="_blank" class="monofont bg-gray-100 py-1 px-2 rounded-sm">hi@guhub.cn</a> 给我发邮件
+    </p>
     <!-- Discord Dialog -->
     <dialog id="discord-dialog" open={discord_dialog == true} class="fixed inset-4">
         <button on:click={() => { discord_dialog=false }} class="rotate-45">+</button>
