@@ -24,6 +24,10 @@
     export let data;
 </script>
 
+<svelte:head>
+    <title>Isla</title>
+</svelte:head>
+
 <!-- Banner -->
 <section id="banner" class="md:flex md:items-center">
     <img id="banner-img" src={logo} alt="a cabin on a small island" class="select-none block mx-auto md:mx-0" />
