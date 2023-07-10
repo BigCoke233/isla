@@ -35,7 +35,12 @@
             span.post-date {
                 font-family: 'IBM Plex Mono', monospace;
                 width: 6rem;
-                color: #999
+                color: #999;
+                @media screen and (max-width: 767px) {
+                    letter-spacing: -0.1rem;
+                    width: 4rem;
+                    font-size: 90%
+                }
             }
             a.post-link {
                 flex-grow: 1;
@@ -43,7 +48,11 @@
             }
             em.post-tags {
                 color: #999;
-                font-size: 60%
+                font-size: 60%;
+                display: none;
+                @media screen and (min-width: 768px) {
+                    display: block
+                }
             }
         }
     }
