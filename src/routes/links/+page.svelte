@@ -1,17 +1,17 @@
 <script>
     export let data;
-
-    import Title from '../Title.svelte'
+    
+    import { breadcrumb as breadcrumb } from '/src/routes/stores';
+    breadcrumb.set('友人')
 </script>
 
 <svelte:head>
   <title>友人 - Isla</title>
 </svelte:head>
 
-<div class="p-3 my-20" id="links">
-    <Title des="这里的船可以去到 Eltrac 朋友的岛">码头</Title>
+<div class="p-3" id="links">
     <article class="max-w-screen-md mx-auto">
-        <ul class="grid grid-cols-2 mt-20 mb-10 md:grid-cols-4 text-center gap-4">
+        <ul class="grid grid-cols-2 my-5 md:grid-cols-4 text-center gap-4">
         {#each data.links as link}
             <li class="text-lg">
                 <a href={link.link} target="_blank">{link.name}</a>
@@ -24,6 +24,7 @@
 </div>
 
 <style lang="scss">
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
     #links {
         ul {
             background-color: #fafafa;

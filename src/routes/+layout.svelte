@@ -6,11 +6,6 @@
     import tailwindLogo from '$lib/images/tailwindcss-logo.svg'
     import logo from '$lib/images/logo.png'
 
-    /* Handle Header Tip*/
-    import { headerTipFade, headerTip as tip } from './stores';
-    function tipPop(content='') { headerTipFade.set(false); tip.set(content) } 
-    function tipFade() { headerTipFade.set(true) }
-
     import { fade } from 'svelte/transition'
     export let data
 </script>
@@ -34,31 +29,26 @@
 
 <!-- page structure -->
 
-<Header />
-
 {#key data.currentRoute}
-  <main class="mt-20" in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
-    <slot />
+  <main class="max-w-screen-md my-20 mx-auto shadow-lg px-10 py-6 bg-white">
+    <Header />
+    <div in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
+        <slot />
+    </div>
+    <footer class="py-4 max-w-screen-md mx-auto border-t flex items-center justify-between">
+        <div>&copy; 2023 Eltrac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a></div>
+        <div>Built with <img src={svelteLogo} alt="svelte"/> + 
+        <img src={tailwindLogo} alt="Tailwind" /></div>
+    </footer>
   </main>
 {/key}
 
-<footer class="flex justify-between items-center py-8">
-    <div>&copy; 2023 Eltrac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a></div>
-    <div>Built with <img src={svelteLogo} alt="svelte" on:mouseleave={tipFade} on:mousemove={() => tipPop('Svelte，难用死了')} /> + 
-    <img src={tailwindLogo} alt="Tailwind" on:mouseleave={tipFade} on:mousemove={() => tipPop('其实是 Tailwind 和 SCSS 混用')} /></div>
-</footer>
-
 <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
-    footer {
-        color: #777;
-        font-size: 110%;
-
-        img {
-            width: 1.2em;
-            display: inline-block;
-            vertical-align: middle;
-            filter: grayscale(1)
-        }
+    footer img {
+        width: 1.2em;
+        display: inline-block;
+        vertical-align: middle;
+        filter: grayscale(1)
     }
 </style>
