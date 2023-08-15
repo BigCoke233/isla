@@ -1,5 +1,6 @@
 <script>
   import icon from "$lib/images/dark-mode.png"
+  import { onMount } from 'svelte';
 
   const STORAGE_KEY = 'theme';
   const DARK_PREFERENCE = '(prefers-color-scheme: dark)';
@@ -37,6 +38,11 @@
 
     applyTheme();
   };
+
+  onMount(() => {
+    applyTheme();
+    window.matchMedia(DARK_PREFERENCE).addEventListener('change', applyTheme);
+  });
 
 </script>
 
