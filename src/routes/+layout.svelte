@@ -1,6 +1,7 @@
 <script>
     import "../app.css";
     import Header from './Header.svelte';
+    import Helpbar from './Helpbar.svelte';
 
     import svelteLogo from '$lib/images/svelte-logo.svg'
     import tailwindLogo from '$lib/images/tailwindcss-logo.svg'
@@ -32,6 +33,7 @@
 {#key data.currentRoute}
   <main class="max-w-screen-md md:my-20 mx-auto shadow-lg px-5 py-3 md:px-10 md:py-6 bg-white">
     <Header />
+    <Helpbar />
     <div in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
         <slot />
     </div>

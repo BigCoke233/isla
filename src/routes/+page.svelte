@@ -19,7 +19,7 @@
 </svelte:head>
 
 <section class="bg-gray-50 rounded-sm py-5 px-10 -mx-10
-text-center md:text-left md:flex gap-6">
+text-center md:text-left md:flex gap-6" id="banner">
     <img src={logo} alt="A cabin on a island" class="w-40 block mx-auto md:inline md:mx-0">
     <div>
         <h2 class="text-2xl font-bold mt-5 mb-3">每个人都是一座孤岛</h2>
