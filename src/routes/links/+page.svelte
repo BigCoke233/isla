@@ -9,8 +9,8 @@
   <title>友人 - Isla</title>
 </svelte:head>
 
-<div class="p-3" id="links">
-    <article class="max-w-screen-md mx-auto">
+<div id="links">
+    <article class="max-w-screen-md mx-auto text-lg">
         <ul class="grid grid-cols-2 my-5 md:grid-cols-4 text-center gap-4">
         {#each data.links as link}
             <li class="text-lg">
@@ -41,7 +41,6 @@
             }
         }
         p {
-            font-size: 110%;
             margin: 0.5em 0;
         }
         

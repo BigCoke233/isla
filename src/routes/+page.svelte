@@ -4,7 +4,6 @@
     import bilibili from '$lib/images/bilibili.svg'
     import discord from '$lib/images/discord.svg'
     import github from '$lib/images/github.svg'
-    import avatar from '$lib/images/avatar.png'
 
     let discord_dialog = false;
 
@@ -19,8 +18,16 @@
     <title>Isla</title>
 </svelte:head>
 
-<section class="bg-gray-50 rounded-sm py-2 px-4 mt-5">
-    <p>页面仍在施工，但多数页面可以正常访问</p>
+<section class="bg-gray-50 rounded-sm py-5 px-10 -mx-10
+text-center md:text-left md:flex gap-6">
+    <img src={logo} alt="A cabin on a island" class="w-40 block mx-auto md:inline md:mx-0">
+    <div>
+        <h2 class="text-2xl font-bold mt-5 mb-3">每个人都是一座孤岛</h2>
+        <p class="text-lg">欢迎来到 Isla，Eltrac 在互联网上的家。</p>
+        <p class="mt-4 text-lg">
+            <a class="arrow-btn" href=" /feed">订阅 Isla</a>
+        </p>
+    </div>
 </section>
 
 <ol class="text-lg" id="blog">
@@ -64,6 +71,39 @@
                 @media screen and (min-width: 768px) {
                     display: block
                 }
+            }
+        }
+    }
+
+    .arrow-btn {
+        line-height: 1;
+        color: #333;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        padding: 0.5rem 2rem;
+        transition: 0.3s;
+        cursor: pointer;
+        /* use flex to align text and arrow */
+        display: inline-flex;
+        align-items: center;
+        /* style the arrow */
+        position: relative;
+        &:before {
+            content: "→";
+            color: gray;
+            font-size: 1.25rem;
+            font-weight: 100;
+            position: absolute;
+            left: 0.25rem;
+            transform: scale(1.5, 1) translateX(-0.5rem);
+            transition: 0.3s
+        }
+        &:hover {
+            background-color: #333;
+            color: #fff;
+            &:before {
+                transform: scale(1.5, 1) translateX(0);
+                color: #fff
             }
         }
     }

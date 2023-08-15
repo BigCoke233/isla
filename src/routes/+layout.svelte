@@ -30,7 +30,7 @@
 <!-- page structure -->
 
 {#key data.currentRoute}
-  <main class="max-w-screen-md my-20 mx-auto shadow-lg px-10 py-6 bg-white">
+  <main class="max-w-screen-md md:my-20 mx-auto shadow-lg px-10 py-6 bg-white">
     <Header />
     <div in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
         <slot />

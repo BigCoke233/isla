@@ -2,7 +2,7 @@
     import { breadcrumb as breadcrumb } from './stores';
 </script>
 
-<header class="px-6 md:px-0">
+<header>
     <nav id="navigation" class="flex justify-between items-center max-w-screen-md mx-auto border-b">
         <div id="navigation-title">
             <a href="/">
