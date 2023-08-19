@@ -18,7 +18,7 @@
     <title>Isla</title>
 </svelte:head>
 
-<section class="bg-gray-50 rounded-sm py-5 px-10 -mx-10
+<section class="bg-gray-50 rounded-sm py-5 px-10
 text-center md:text-left md:flex gap-6" id="banner">
     <img src={logo} alt="A cabin on a island" class="w-40 block mx-auto md:inline md:mx-0">
     <div>
@@ -30,7 +30,7 @@ text-center md:text-left md:flex gap-6" id="banner">
     </div>
 </section>
 
-<ol class="text-lg" id="blog">
+<ol class="text-lg py-0 px-4 md:px-10" id="blog">
     {#each data.posts as post}
         <li class="flex gap-8">
             <span class="post-date"> {post.meta.date}</span>

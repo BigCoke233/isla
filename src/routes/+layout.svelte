@@ -31,13 +31,14 @@
 <!-- page structure -->
 
 {#key data.currentRoute}
-  <main class="max-w-screen-md md:my-20 mx-auto shadow-lg px-5 py-3 md:px-10 md:py-6 bg-white">
+  <main class="max-w-screen-md md:my-20 mx-auto shadow-lg bg-white">
     <Header />
     <Helpbar />
     <div in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
         <slot />
     </div>
-    <footer class="py-4 max-w-screen-md mx-auto border-t md:flex items-center justify-between text-center md:text-left">
+    <footer class="p-4 md:px-10 md:py-6
+    max-w-screen-md mx-auto border-t md:flex items-center justify-between text-center md:text-left">
         <div>&copy; 2023 Eltrac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a></div>
         <div>Built with <img src={svelteLogo} alt="svelte"/> + 
         <img src={tailwindLogo} alt="Tailwind" /></div>

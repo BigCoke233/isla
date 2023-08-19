@@ -3,7 +3,7 @@
 </script>
 
 <header>
-    <nav id="navigation" class="flex justify-between items-center max-w-screen-md mx-auto border-b">
+    <nav id="navigation" class="flex justify-between items-center border-b p-4 md:px-10">
         <div id="navigation-title">
             <a href="/">
                 <h1>Isla</h1>
@@ -27,7 +27,6 @@
     $decoration-color: #aaa;
 
     #navigation {
-        padding: .75em 0;
         color: $text-color;
 
         #navigation-title {

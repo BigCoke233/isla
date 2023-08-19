@@ -27,7 +27,7 @@
   </script>
 </svelte:head>
 
-<div class="mt-10" id="blog-content">
+<div class="mt-10 py-0 px-4 md:px-10" id="blog-content">
   <header class="text-center mb-10">
     <h1 class="font-bold text-3xl">{ data.title }</h1>
     <p class="my-2 text-gray-600">{data.date} · <a href={taglink}>{data.tags}</a></p>

@@ -10,7 +10,7 @@
 </svelte:head>
 
 <div id="links">
-    <article class="max-w-screen-md mx-auto text-lg">
+    <article class="max-w-screen-md mx-auto text-lg py-0 px-4 md:px-10">
         <ul class="grid grid-cols-2 my-5 md:grid-cols-4 text-center gap-4">
         {#each data.links as link}
             <li class="text-lg">

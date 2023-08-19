@@ -8,7 +8,7 @@
 <!-- ...Post HTML here -->
     
 {#if data.tag.length}
-<ol class="text-lg" id="blog">
+<ol class="text-lg py-0 px-4 md:px-10" id="blog">
     {#each data.posts as post}
         <li class="flex gap-8">
             <span class="post-date"> {post.meta.date}</span>
