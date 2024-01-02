@@ -1,38 +1,7 @@
-# create-svelte
+# 🏝️ Isla · 屿
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+**Isla** (*/ızlæ/*) 在西班牙语中意为「岛屿」，是 [Eltrac](https://github.com/BigCoke233) 曾经使用过的一个静态博客程序的名字。
 
-## Creating a project
+该博客程序使用 SvelteKit 编写，同时使用了 Vite、PostCSS、TailwindCSS 等技术，使用 Giscus 作为评论系统。博客文章数据使用 Markdown 文件储存，仅实现了文章展示、简单的标签系统等功能。
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Isla 目前因为不再使用而归档，仅作交流学习用途保留。
